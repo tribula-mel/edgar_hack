@@ -1,0 +1,98 @@
+From 6818de3700699b501e6a0d37d7b2deb8a56f1dc3 Mon Sep 17 00:00:00 2001
+From: Boban Petrovic <tribula@tesla.(none)>
+Date: Mon, 22 Nov 2010 18:44:44 -0500
+Subject: [PATCH] changes needed to introduce zig-zag sword
+
+For my little guys Miki and Uki
+
+Signed-off-by: Boban Petrovic <tribula@tesla.(none)>
+---
+ data/gfx/weapon/zigzag_sword.dat     |    5 +++++
+ data/maps/map18.dat                  |   25 +++++++++++++++++++++++++
+ data/props/weapon/zigzag_sword.props |    6 ++++++
+ gfx/weapon/zigzag_sword.png          |  Bin 0 -> 418 bytes
+ 4 files changed, 36 insertions(+), 0 deletions(-)
+ create mode 100644 data/gfx/weapon/zigzag_sword.dat
+ create mode 100644 data/props/weapon/zigzag_sword.props
+ create mode 100644 gfx/weapon/zigzag_sword.png
+
+diff --git a/data/gfx/weapon/zigzag_sword.dat b/data/gfx/weapon/zigzag_sword.dat
+new file mode 100644
+index 0000000..a0f5f32
+--- /dev/null
++++ b/data/gfx/weapon/zigzag_sword.dat
+@@ -0,0 +1,5 @@
++gfx/weapon/zigzag_sword.png
++gfx/weapon/basic_sword_slash00.png
++gfx/weapon/basic_sword_slash01.png
++gfx/weapon/basic_sword_slash02.png
++gfx/weapon/basic_sword_slash03.png
+diff --git a/data/maps/map18.dat b/data/maps/map18.dat
+index b9853da..f6c5a81 100644
+--- a/data/maps/map18.dat
++++ b/data/maps/map18.dat
+@@ -3645,6 +3645,31 @@ FACE RIGHT
+ }
+ 
+ {
++TYPE WEAPON
++NAME weapon/zigzag_sword
++X 23904
++Y 2176
++START_X 23904
++START_Y 2176
++END_X 23904
++END_Y 2176
++DIR_X 0.00
++DIR_Y 0.00
++MAX_THINKTIME 0
++THINKTIME 0
++MENTAL 10
++HEALTH 0
++DAMAGE 100
++SPAWNTIME 0
++SPEED 0.00
++WEIGHT 1.00
++OBJECTIVE_NAME Lightning Sword
++REQUIRES
++ACTIVE TRUE
++FACE LEFT
++}
++
++{
+ TYPE SCRIPT_LINE_DEF
+ NAME common/line_def
+ X 23200
+diff --git a/data/props/weapon/zigzag_sword.props b/data/props/weapon/zigzag_sword.props
+new file mode 100644
+index 0000000..7069e18
+--- /dev/null
++++ b/data/props/weapon/zigzag_sword.props
+@@ -0,0 +1,6 @@
++DAMAGE 100
++GFX_FILE data/gfx/weapon/zigzag_sword.dat
++ANIM_FILE data/anim/weapon/basic_sword.dat
++TYPE WEAPON
++OBJECTIVE_NAME ZigZag Sword
++DESCRIPTION ZigZag sword given to you by Uki_Miki_Boban
+diff --git a/gfx/weapon/zigzag_sword.png b/gfx/weapon/zigzag_sword.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..52fbd46e541f935ababc49f2da50e7dafe0039a5
+GIT binary patch
+literal 418
+zcmeAS@N?(olHy`uVBq!ia0vp^G9b*s1|*Ak?@s|zjKx9jP7LeL$-D$|*pj^6T^Rm@
+z;DWu&Cj&(|3p^r=85p>QL70(Y)*K0-AbW|YuPgg)7D-VvA)YUl_CO)Y64!_l=ltB<
+z)VvY~=c3falGGH1^30M91$R&1fbd2>aiF5Vo-U3d9><f{{Ez=Xzwy|Eyi3v+vpXC8
+z9(++2W&;7SsvmDa?BJcoJf}XpWW0Btk!o<jDVsadZt<?x6P(P`->;aL;b(8usLnUz
+z{RKwuwao&u7j&a}X0+;D@sKguDzNj)g4wM*f)sppQxXym%$8!WU$oGqaDwQPDJp!6
+zbms_fo2{5SRr_dXvj+F`mbYz}`)t}oRQVPO_rBt@oW=V5frfW}wM|mMUB%-cTr<qx
+z>bm&p7<hlLx8(1SUKMSjo@0La=e}^B?Y43UYq`3Evm#Hm<jqW+C~;@GLHEU4|H5qt
+z(j>R)II#CzS{U~KqV8hVgeiPmfBAdMFJxx;dnbeAddj-xz<^-zboFyt=akR{0C(4!
+A8vp<R
+
+literal 0
+HcmV?d00001
+
+-- 
+1.7.0.4
+
